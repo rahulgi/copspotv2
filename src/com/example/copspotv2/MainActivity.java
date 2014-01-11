@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 
 		// Create a new item
 		CopLocation loc = new CopLocation();
-		loc.setLocation("Test Lcoation");
+		loc.setLocation(37.4278, -122.17426666666667);
 
 		//loc.setText(mTextNewToDo.getText().toString());
 		//item.setComplete(false);

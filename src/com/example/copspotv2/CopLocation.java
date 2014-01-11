@@ -3,19 +3,22 @@ package com.example.copspotv2;
 public class CopLocation {
 
 	/**
-	 * Item text
+	 * Cop latitude
 	 */
-	@com.google.gson.annotations.SerializedName("location")
-	private String mLocation;
+	@com.google.gson.annotations.SerializedName("latitude")
+	private Double latitude;
+	
+	@com.google.gson.annotations.SerializedName("longitude")
+	private Double longitude;
 
 	/**
-	 * Item Id
+	 * Cop Id
 	 */
 	@com.google.gson.annotations.SerializedName("id")
 	private String mId;
 
 	/**
-	 * ToDoItem constructor
+	 * CopLocation constructor
 	 */
 	public CopLocation() {
 
@@ -27,44 +30,45 @@ public class CopLocation {
 	}
 
 	/**
-	 * Initializes a new ToDoItem
+	 * Initializes a new CopLocation
 	 * 
 	 * @param text
 	 *            The item text
 	 * @param id
 	 *            The item id
 	 */
-	public CopLocation(String location, String id) {
-		this.setLocation(location);
+	public CopLocation(double lat, double lng, String id) {
+		this.setLocation(lat, lng);
 		this.setId(id);
 	}
 
 	/**
-	 * Returns the item text
+	 * Returns the cop location
 	 */
 	public String getLocation() {
-		return mLocation;
+		return latitude.toString() + ", " + longitude.toString();
 	}
 
 	/**
-	 * Sets the item text
+	 * Sets the cop location
 	 * 
 	 * @param text
 	 *            text to set
 	 */
-	public final void setLocation(String location) {
-		mLocation = location;
+	public final void setLocation(double lat, double lng) {
+		latitude = lat;
+		longitude = lng;
 	}
 
 	/**
-	 * Returns the item id
+	 * Returns the CopLocation id
 	 */
 	public String getId() {
 		return mId;
 	}
 
 	/**
-	 * Sets the item id
+	 * Sets the CopLocation id
 	 * 
 	 * @param id
 	 *            id to set
